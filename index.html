@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Fylo landing page with dark theme and features grid</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    header {
+      background-color:rgb(23, 24, 29);
+    }
+
+    body {
+      font-family: sans-serif;
+    }
+
+    .container {
+    width: 100%;
+    margin: auto;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+div.leftside-col img.logo {
+  /* background-color: yellowgreen; */
+  margin-left: 2rem;
+}
+
+.rightside-col a.anc {
+  /* margin-left: 4rem; */
+  left: 100%;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+div.rightside-col a.anc {
+  text-decoration: none;
+  float: right; 
+  padding: 1.2rem;
+  color: white;
+  
+}
+
+    div.top-down h2 {
+      text-align: center;
+      font-size: 3em;
+      display: block;
+      color: white;
+      font-family: sans-serif;
+    } 
+
+    div.top-down img {
+      margin: 1rem 0 5rem 20rem;
+    }
+
+    p.first-paragraph {
+      text-align: center;
+      font-size: 2.3rem;
+      color: white;
+      font-family: sans-serif;
+      display: block;
+      font-weight: lighter;
+    }
+
+    div.top-down button {
+      font-size: 0.8em;
+      color: white;
+      background-color: skyblue;
+      width: 9em;
+      height: 3em;
+      text-align: center;
+      margin: 1rem 0 5rem 40rem;
+      box-sizing: border-box;
+      border-radius: 15px 15px;
+      box-shadow: none;
+     border-top: none;
+     border-left: none;
+    }
+
+    div.access h2 {
+      color: white;
+      margin-left: 2.4rem;
+      font-size: 3rem;
+    }
+
+    div.access p {
+     color: white;
+     font-size: 2rem;
+     padding-right: 2rem;
+    }
+
+    div.security h2 {
+      color: white;
+      margin-left: 3rem;
+      font-size: 3rem;
+    }
+
+    div.security p {
+      color: white;
+      font-size: 2rem;
+      padding-left: 2rem;
+    }
+
+    div.real-time h2 {
+      color: white;
+      margin-left: 3rem;
+      font-size: 3rem;
+    }
+
+    div.real-time p {
+      color: white;
+      font-size: 2rem;
+      padding-right: 2rem;
+    }
+
+    div.store h2 {
+      color: white;
+      margin-left: 3rem;
+      font-size: 3rem;
+    }
+
+    div.store p {
+      color: white;
+      font-size: 2rem;
+      padding-left: 2rem;
+    }
+
+    div.container img {
+      margin-left: 16rem;
+    }
+
+   div.illus img {
+     margin-left: 0;
+   }
+
+   div.productive h2 {
+     font-size: 4rem;
+     color: white;
+   }
+
+   div.productive p {
+     color: white;
+     font-size: 2rem;
+   }
+
+   div.productive a {
+     text-decoration: underline;
+     position: relative;
+     color: skyblue;
+     font-size: 2rem;
+   }
+
+   div.productive a img {
+     right: 0;
+      }
+
+   div.box {
+    text-align: center;
+    margin: 24px;
+    padding: 36px 24px 40px 24px;
+    background-color: hsl(225, 10%, 30%);
+    border-radius: 7px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.15),
+    0 2px 3px 0 rgba(0,0,0,.15);
+   }
+
+   div.first-col p {
+     color: white;
+     font-size: 1.3rem;
+   }
+
+
+   div.first-col p.first img {
+     display: block;
+     border-radius: 50%;
+   }
+
+   div.second-col p {
+     color: white;
+     font-size: 1.3rem;
+   }
+
+   div.second-col p.second img {
+    display: block;
+     border-radius: 50%;
+   }
+
+   div.third-col p {
+     color: white;
+     font-size: 1.3rem;
+   }
+   
+   div.third-col p.third img {
+    display: block;
+     border-radius: 50%;
+   }
+
+   div.box p span {
+     font-size: 1rem;
+   }
+
+div.early h2 {
+  color: white;
+  font-size: 3rem;
+}
+
+div.early p {
+  color: white;
+  font-size: 2rem;
+}
+  
+div.early input {
+  width: 22rem;
+  height: 1.6rem;
+  border-radius: 15px;
+  box-shadow: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+} 
+
+div.early button {
+  width: 10rem;
+  height: 2rem;
+  background: skyblue;
+  margin-left: 3rem;
+  color: white;
+  border-radius: 15px;
+  box-shadow: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+div.col-9 {
+  margin-top: 5rem;
+  margin-left: 10rem;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+footer {
+  background:  rgb(15, 15, 15);
+}
+
+img.footer {
+  margin-top: 4rem ;
+  margin-left: 2rem;
+  margin-bottom: 0;
+}
+
+div.first-footer-col p {
+  color: white;
+  margin-left: 2rem;
+  margin-top: 0;
+  display: block;
+}
+
+div.second-footer-col li {
+  color: white;
+  list-style: none;
+}
+
+div.third-footer-col li {
+  color: white;
+  list-style: none;
+}
+
+div.fourth-footer-col li {
+  color: white;
+  list-style: none;
+}
+
+p.attribution {
+  color: white;
+  font-size: 3rem;
+}
+
+/* ########## Mobile ######### */
+@media screen and (max-width: 680px) {
+
+
+  div.rightside-col a.anc {
+  text-decoration: none;
+  float: right; 
+  padding: 1rem;
+  color: white;
+  font-size: 0.9rem;
+}
+
+div.top-down h2 {
+      text-align: center;
+      font-size: 3em;
+      display: block;
+      color: white;
+      font-family: sans-serif;
+      font-size: 2rem;
+    } 
+
+    p.first-paragraph {
+      text-align: center;
+      font-size: 1.5rem;
+      color: white;
+      font-family: sans-serif;
+      display: block;
+      font-weight: lighter;
+    }  
+    
+    div.top-down button {
+      font-size: 0.8em;
+      color: white;
+      background-color: skyblue;
+      width: 300px;
+      height: 50px;
+      margin-left: 5rem;
+      text-align: center;
+      box-sizing: border-box;
+      border-radius: 20px;
+      box-shadow: none;
+     border-top: none;
+     border-left: none;
+    }   
+
+div.mobile h2 {
+      color: white;
+      margin-left: 3rem;
+      font-size: 3rem;
+      margin-left: 1.5rem;
+      font-size: 2rem;
+}
+
+div.mobile p {
+      color: white;
+      font-size: 1.5rem;
+      margin-left: 1rem;
+}
+
+  div.mobilestack {
+        width: 50%;
+        display: block;
+    }
+
+    
+    div.box {
+        padding: 5px;
+        display: block;
+    }
+
+    
+    .col-6, .col-4, .col-7, .col-5 {
+        width: 100%;
+        margin: 0;
+    }
+
+    div.early {
+      width: auto;
+      margin-left: 0;
+    }
+
+    div.early input {
+  width: 300px;
+  height: 30px;
+  border-radius: 15px;
+  box-shadow: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+} 
+
+    div.early button {
+      height: 30px;
+      width: 300px;
+      margin-left: 0;
+    }
+
+    div.top-down img {
+      width: auto;
+      margin-left: 2rem;
+      height: 300px;
+    }
+
+    div.illus img {
+      width: auto;
+      margin-left: 2rem;
+      height: 300px;
+    }
+
+    div.productive h2 {
+     font-size: 1.5rem;
+     color: white;
+     margin-left: 2rem;
+   }
+
+   div.productive p {
+     color: white;
+     font-size: 1rem;
+     margin-left: 2rem;
+   }
+
+   div.productive a {
+     text-decoration: underline;
+     position: relative;
+     color: skyblue;
+     font-size: 1.3rem;
+     font-weight: lighter;
+     margin-left: 2rem;
+   }
+
+
+}
+
+  </style>
+</head>
+<body>
+  <header>
+  <div class="container">
+    <div class="row">
+       <div class="col-6">
+           <div class="leftside-col">
+              <img class="logo" src="images/logo.svg" alt=""> 
+           </div>
+       </div>
+        <div class="col-6">   
+           <div class="rightside-col">
+               <a class="anc" href="#">Sign In</a>
+               <a class="anc" href="#">Terms</a>
+              <a class="anc" href="#">Features</a> 
+           </div> 
+        </div>
+    </div>
+  </div> 
+<div class="top-down">
+  <img src="images/illustration-intro.png" alt="">
+  <h2>All your files in one secure location, accessible anywhere.</h2>
+
+  <p class="first-paragraph">Fylo stores all your most important files in one secure location. Access them wherever 
+  you need, share and collaborate with friends family, and co-workers.</p>
+
+  <button>Get Started</button>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <div class="leftside-col access mobile">
+        <img src="images/icon-access-anywhere.svg" alt="">
+         <h2>Access your files, anywhere</h2>
+          <p> The ability to use a smartphone, tablet, or computer to access your account means your 
+               files follow you everywhere.</p>
+      </div>
+    </div>
+    <div class="col-6">
+     <div class="rightside-col security mobile">
+      <img src="images/icon-security.svg" alt="">
+       <h2>Security you can trust</h2>
+       <p>2-factor authentication and user-controlled encryption are just a couple of the security 
+         features we allow to help secure your files.</p>
+     </div> 
+    </div>
+  </div>
+</div>    
+
+
+<div class="container">
+  <div class="row">
+        <div class="col-6">
+          <div class="leftside-col real-time mobile">
+            <img src="images/icon-collaboration.svg" alt=""> 
+             <h2>Real-time collaboration</h2>
+             <p>Securely share files and folders with friends, family and colleagues for live collaboration. 
+                No email attachments required.</p>  
+          </div> 
+        </div>
+        <div class="col-6">
+         <div class="rightside-col store mobile">
+          <img src="images/icon-any-file.svg" alt="">
+             <h2>Store any type of file</h2>
+             <p>Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all 
+                file types to be securely stored and shared.</p> 
+         </div> 
+        </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+          <div class="col-6">
+            <div class="leftside-col illus">
+                <img src="images/illustration-stay-productive.png" alt="">
+            </div> 
+          </div>
+          <div class="col-6">
+            <div class="rightside-col productive">
+              <h2>Stay productive, wherever you are</h2> 
+              <p>Never let location be an issue when accessing your files. Fylo has you covered for all of your file 
+                storage needs.</p> 
+
+              <p>Securely share files and folders with friends, family and colleagues for live collaboration. No email 
+                 attachments required.</p> 
+
+                <a href="#">See how Fylo works <img src="images/icon-arrow.svg" alt=""></a>
+            </div> 
+          </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <div class="box">
+      <div class="first-col">
+         <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
+           become a well-oiled collaboration machine.</p>
+
+          <P class="first"><img  width="40rem" height="40px" src="images/profile-1.jpg" alt=""> Satish Patel <span>Founder & CEO, Huddle</span></P>
+       </div>
+      </div>
+    </div> 
+
+    <div class="col-4">
+      <div class="box">
+      <div class="second-col">
+        <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
+         become a well-oiled collaboration machine.</p>
+
+        <p class="second"><img width="40rem" height="40px" src="images/profile-2.jpg" alt=""> Bruce McKenzie <span>Founder & CEO, Huddle</span></p>
+       </div>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="box">
+       <div class="third-col">
+        <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
+           become a well-oiled collaboration machine.</p>
+
+        <p class="third"><img  width="40rem" height="40px" src="images/profile-3.jpg" alt=""> Iva Boyd <span>Founder & CEO, Huddle</span></p> 
+      </div>
+     </div>
+    </div>
+  </div>
+</div>  
+
+<div class="container">
+  <div class="row">
+    <div class="col-9 early">
+      <div class="box">
+
+        <h2>Get early access today</h2>
+
+        <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any 
+           questions, our support team would be happy to help you.</p>
+      <div class="help">     
+        <p><input type="text"><button>Get Started For Free</button></p>
+     </div>
+    </div>
+   </div>
+ </div>
+</div>  
+  </header>
+
+<footer>
+  <img class="footer" src="images/logo.svg" alt="">
+ 
+ <div class="container">
+   <div class="row">
+     <div class="col-3 mobilestack">
+       <div class="first-footer-col">
+         <p><img src="images/icon-location.svg" alt=""> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+            dolore magna aliqua</p>
+       </div>
+     </div>
+
+   <div class="col-3 mobilestack"> 
+     <div class="second-footer-col">
+       <ul>
+        <li><img src="images/icon-phone.svg" alt="">About Us</li>
+        <li><img src="images/icon-email.svg" alt=""> Jobs</li>
+        <li>Press</li>
+        <li>Blog</li>
+       </ul>
+     </div>
+   </div>
+  <div class="col-3 mobilestack">
+    <div class="third-footer-col">
+      <ul>
+       <li>+1-543-123-4567</li>
+       <li> example@fylo.com</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-3 mobilestack">
+    <div class="fourth-footer-col">
+      <ul>
+       <li>Contact Us</li>
+       <li>Terms</li>
+       <li>Privacy</li>
+      </ul>
+    </div>
+  </div>
+ </div>
+</div>
+
+  
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Silas Abayomi</a>.
+    </p>
+</footer>
+</body>
+</html>
